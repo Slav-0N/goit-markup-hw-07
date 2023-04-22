@@ -249,9 +249,8 @@ body {
 
 
 .goals-item {
-  width: 100%;
+    width: 100%;
 }
-
 
 .goals-item:not(:last-child) {
   margin-bottom: 72px;
