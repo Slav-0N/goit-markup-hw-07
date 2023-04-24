@@ -78,6 +78,9 @@ body {
 }
 
 
+
+/** ------------------ Header ---------------------------*/
+
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -111,72 +114,34 @@ body {
     margin-right: 76px;
 }
 
+ .header-list {
+     display: none;
+ }
 
-.header-link {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--header-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ .adr {
+    display: none;
+ }
+
+.menu-open-btn {
+    stroke: #2E2F42;
+    outline: transparent;
+    padding: 0;
+    border: 0;
 }
 
-.header-link:hover,
-.header-link:focus {
-    color: var(--hoverocus);
+.mobile-menu {
+    background-color: transparent;
+    outline: transparent;
+    padding: 0;
+    border: 0;
 }
 
-.header-list {
-    display: flex;
-    gap: 40px;
-}
-
-.adr {
-    font-style: normal;
-}
-
-.adr ul {
-    display: flex;
-    gap: 40px;
-}
-
-.header div {
+.menu-cont {
     display: flex;
     justify-content: space-between;
-  
 }
 
 
-
-
-.header-address { 
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--body-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
-.header-address:hover,
-.header-address:focus {
-    color: #404BBF;
-}
-
-.current {
-    position: relative;
-}
-
-.current::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background: #404BBF;
-    left: 0;
-    top: 43px;
-   
-}
 
 
 
@@ -261,7 +226,9 @@ body {
 
 /** -----------------  Goals -------------------- */
 
-
+.stak-cont {
+    max-width: 428px;
+}
 
 
 .goals-item {
@@ -294,7 +261,9 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-   
+    max-width: 396px;
+    
+       
     
 
 
@@ -474,6 +443,7 @@ margin-bottom: 72px;
     display: flex;
     flex-direction: column;
     margin: 120px auto;
+    max-width: 396px;
 
 
 
@@ -1211,12 +1181,20 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
 
 
-/**   ------------->>>  media display:none  <<<<<-------------   */
+/**   ------------->>> hidden media   <<<<<-------------   */
 
-@media screen and (max-width: 427px) {
+@media screen and (max-width: 1158px) {
     .work {
         display: none;
     }
+
+
+/* @media screen and (max-width: 768px) {
+    .header-list,
+    .adr {
+        position: absolute;
+        top: -100%;
+   } */
 
 }
 
@@ -1230,35 +1208,111 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 @media screen and (min-width: 428px) {
 
 
-/* =====   Hero   428 px=================================================*/
-
-
-   
-/* =====   Goals   428 px=================================================*/
     .container {
         max-width: 428px;
     }
-
-
-/* =====   Work   428 px=================================================*/
-        .work {
-            display: none;
-        }
-    
-/* =====   Team   428 px=================================================*/
-
-
-
-
-
-
+ 
+   
 }
+
+
+
 
 
 
 /* =====   media 768 px=================================================*/
 
 @media screen and (min-width: 768px) {
+
+/* =====   Header   768 px=================================================*/
+
+
+    .header-link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--header-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .header-link:hover,
+    .header-link:focus {
+        color: var(--hoverocus);
+    }
+
+    .header-list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .adr {
+        display: flex;
+        font-style: normal;
+    }
+
+    .adr ul {
+        display: flex;
+        gap: 40px;
+    }
+
+    .header div {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+
+
+    .header-address {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--body-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .header-address:hover,
+    .header-address:focus {
+        color: #404BBF;
+    }
+
+
+
+    .current {
+        position: relative;
+    }
+
+    .current::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background: #404BBF;
+        left: 0;
+        top: 43px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* =====   Goals   768 px=================================================*/
@@ -1424,6 +1478,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
    .our-staks {
     padding-top: 120px;
     padding-bottom: 120px;
+    
    }
 
     .goal-title {
