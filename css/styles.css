@@ -274,8 +274,9 @@ body {
 
 .mob-soc-list {
     display: flex;
-    gap: 16px;
+    gap: 56px;
     justify-content: space-between;
+    max-width: 364px;
     
     
     
@@ -285,6 +286,7 @@ body {
 .mob-soc-item {
     width: 40px;
     height: 40px;
+
 }
 
 .mob-soc-link {
