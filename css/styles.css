@@ -352,17 +352,29 @@ body {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7), 
         rgba(46, 47, 66, 0.7)
-        ), url("../images/bg-image.jpg");
+        ), url("../images/opt-bg-mob.jpg");
     
     background-repeat: no-repeat;
     background-position: center;
-    /* background-size: cover; */
-    max-width: 428px;
+    background-size: cover;
+    /* max-width: 428px; */
     margin: 0 auto;
 
 
     padding-top: 112px;
-    padding-bottom: 112px; }
+    padding-bottom: 112px; 
+
+}
+
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)), url("../images/opt-bg-mobile-2x.jpg");
+    }
+}
 
 .cont-align {
     display: flex;
@@ -1407,13 +1419,23 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     .container {
         max-width: 428px;
     }
+    .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+    url("../images/opt-bg-tablet.jpg");
+    max-width: 428px;
+    }
 
-    
- 
-   
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)), url("../images/opt-bg-tablet-2x.jpg");
+         }
+    }
+
 }
-
-
 
 
 
@@ -1546,8 +1568,24 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
 /* =====   Hero    768 px=================================================*/
     .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url("../images/bg-image.jpg");
         max-width: 768px;
     }
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)), url("../images/opt-bg-dcktp-2x.jpg");
+            }
+        }
+
+
+
+
+
     .hero-name {
         max-width: 496px;
         font-size: 56px;
@@ -1694,7 +1732,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
 /* =====   Hero 1158 px=================================================*/
     .hero {
-        max-width: 1440px;
+        max-width: 1158px;
     }
 
     .cont-align {
@@ -1714,7 +1752,8 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
             gap: 24px;
     }
     .goals-item {
-         width: 264px;
+        /* width: 264px; */
+        width: calc((100% - 3*24px) / 4);
 
    }
 
@@ -1781,6 +1820,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
 
 }
+
   
 
 
